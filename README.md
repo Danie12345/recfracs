@@ -35,6 +35,9 @@ A few years ago, when I came up with this algorithm, I did not know much about p
 - Navigate to root dir, then run command
   - `pip freeze > requirements.txt`
 
+### Run
+- Navigate to `main.py` and run the file normally
+
 ### Open a pull request
 - Once you've finished adding changes, add yourself as a contributor below
 - Open your pull request, and @ [me](https://github.com/Danie12345)
