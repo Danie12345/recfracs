@@ -43,4 +43,4 @@ A few years ago, when I came up with this algorithm, I did not know much about p
 
 
 ## Licensing
-![LICENSE](https://github.com/Danie12345/recfracs/LICENSE.txt)
+![LICENSE](https://github.com/Danie12345/recfracs/blob/master/LICENSE.txt)
