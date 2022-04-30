@@ -22,7 +22,7 @@ A few years ago, when I came up with this algorithm, I did not know much about p
 
 ## Contribute
 ### Requirements
-- Have Python 3.8+ installed in your system
+- Have Python 3.9.1+ installed in your system
 - Have pip3 installed
 
 ### Setup
