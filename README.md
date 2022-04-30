@@ -1,6 +1,7 @@
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 # Recursive Fractions
 > Like the project? Leave a star, it helps! ;)
-
+**Alpha version**
 
 ## Description
 recfracs is an app that expands any rational (decimal) number into fraction form. It does not use the conventional method of division by powers of 10. It uses an entirely different and intuitive mathematical algorithm.
@@ -38,9 +39,9 @@ A few years ago, when I came up with this algorithm, I did not know much about p
 - Open your pull request, and @ [me](https://github.com/Danie12345)
 
 
-## Contributions
+## Contributors
 - [Your name](https://github.com)
 
 
-## Licensing
-![LICENSE](https://github.com/Danie12345/recfracs/blob/master/LICENSE.txt)
+## License
+Licensed under the [GNU GPL v3 license](LICENSE).
