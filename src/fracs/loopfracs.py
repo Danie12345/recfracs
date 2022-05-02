@@ -1,13 +1,13 @@
-from math import trunc, e
+import math
 
-def fraction(a = 1, n = 5, err = 10**-6):
-    ints = [abs(trunc(a))]
-    decs = [abs(a-trunc(a))]
+def loopfracs(a = 1, n = 5, err = 10**-6):
+    ints = [abs(math.trunc(a))]
+    decs = [abs(a-math.trunc(a))]
     i = 0
     while not (-err < decs[-1] < err) and decs[-1] != 0 and i < n:
         u = 1/decs[i]
-        ints.append(trunc(u))
-        decs.append(u-trunc(u))
+        ints.append(math.trunc(u))
+        decs.append(u-math.trunc(u))
         i += 1
     v = round(decs[-1])
     n,d = 1 if v == 1 else 0,1
@@ -21,10 +21,3 @@ def fraction(a = 1, n = 5, err = 10**-6):
     if a < 0:
         d *= -1
     return d,n,d/n
-
-def recfrac(a = 1, n = 5, err = 10**-6):
-    pass
-
-a = e
-
-print (fraction(a,n=50))

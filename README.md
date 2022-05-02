@@ -2,7 +2,7 @@
 # Recursive Fractions
 > Like the project? Leave a star, it helps! ;)
 
-**Alpha version**
+**Release 0.3.0**
 
 ## Description
 recfracs is an app that expands any rational (decimal) number into fraction form. It does not use the conventional method of division by powers of 10. It uses an entirely different and intuitive mathematical algorithm.
@@ -22,7 +22,7 @@ A few years ago, when I came up with this algorithm, I did not know much about p
 
 ## Contribute
 ### Requirements
-- Have Python 3.8+ installed in your system
+- Have Python 3.9.1+ installed in your system
 - Have pip3 installed
 
 ### Setup
@@ -34,6 +34,9 @@ A few years ago, when I came up with this algorithm, I did not know much about p
 ### To introduce new packages used
 - Navigate to root dir, then run command
   - `pip freeze > requirements.txt`
+
+### Run
+- Navigate to `main.py` and run the file normally
 
 ### Open a pull request
 - Once you've finished adding changes, add yourself as a contributor below
