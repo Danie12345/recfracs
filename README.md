@@ -2,7 +2,7 @@
 # Recursive Fractions
 > Like the project? Leave a star, it helps! ;)
 
-**Release 0.2.0**
+**Release 0.3.0**
 
 ## Description
 recfracs is an app that expands any rational (decimal) number into fraction form. It does not use the conventional method of division by powers of 10. It uses an entirely different and intuitive mathematical algorithm.
