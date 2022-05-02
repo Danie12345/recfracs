@@ -2,8 +2,10 @@ import fractions
 from itertools import tee
 from screeninfo import get_monitors
 import tkinter as tk
-import fracs.loopfracs as loopfracs
-import fracs.recfracs as recfracs
+
+from setuptools import Command
+from fracs.recfracs import recfracs as recFracs
+from fracs.loopfracs import loopfracs as loopFracs
 
 # Window initialization
 WIN_WIDTH = 350
@@ -13,7 +15,7 @@ root.geometry(f"{WIN_WIDTH}x{WIN_HEIGHT}+{(get_monitors()[0].width - WIN_WIDTH)/
 
 
 # Convenient storage of functions
-algorithms = {'Recursion': recfracs, 'Loops': loopfracs}
+algorithms = {'Recursion': recFracs, 'Loops': loopFracs}
 fraction = algorithms['Recursion']
 
 
@@ -36,6 +38,15 @@ algoritmLabel.pack()
 decimalInput.pack()
 numeratorInput.pack()
 denominatorInput.pack()
+
+
+# Function for running algorithm on-demand
+def getFraction(*args):
+  n, d, *residue = fraction(a = decimalVar.get())
+  numeratorVar.set(value = n)
+  denominatorVar.set(value = d)
+
+decimalVar.trace('w', callback = getFraction)
 
 
 # Algorithm switcher
@@ -61,4 +72,7 @@ root.config(menu = navMenu)
 
 
 # Initiate mainloop sequence
+root.iconify()
+root.update()
+root.deiconify()
 root.mainloop()
