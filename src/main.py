@@ -42,7 +42,7 @@ denominatorInput.pack()
 
 # Function for running algorithm on-demand
 def getFraction(*args):
-  n, d, *residue = fraction(a = decimalVar.get())
+  d, n, *residue = fraction(a = decimalVar.get(), n = None, p = 4)
   numeratorVar.set(value = n)
   denominatorVar.set(value = d)
 
@@ -51,6 +51,8 @@ decimalVar.trace('w', callback = getFraction)
 
 # Algorithm switcher
 def switch_algorithm(type):
+  global fraction
+  getFraction()
   fraction = algorithms[type]
   algorithmName.set(type)
 

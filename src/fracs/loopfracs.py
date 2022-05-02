@@ -1,6 +1,6 @@
 import math
 
-def loopfracs(a = 1, n = 5, err = 10**-6):
+def loopfracs(a = 1.0, n = 5, err = 10**-4):
     ints = [abs(math.trunc(a))]
     decs = [abs(a-math.trunc(a))]
     i = 0
