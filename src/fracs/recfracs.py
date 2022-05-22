@@ -1,30 +1,45 @@
+from __future__ import nested_scopes
 import math
 
+def nEscape(n):
+    return n <= 0
+
+def kEscape(r, k):
+    return k > abs(r) > -k
+
 def recfracs(a = 1.0, n = None, p = None):
-    if n == None:
-        n = 0
-        k = 10**(-p)
-        escape = lambda r = None, k = None, n = None: 1 + k > abs(r) > 1 - k
-        deepen = lambda r = None, k = None, n = None: not(1 + k > abs(r) > 1 - k)
-    elif p == None:
-        n = n
-        k = 0
-        escape = lambda r = None, k = None, n = None: n == 0
-        deepen = lambda r = None, k = None, n = None: n > 0
-    else:
-        n = 8
-        p = 4
-        k = 10**(-p)
-        escape = lambda r = None, k = None, n = None: n == 0 or 1 + k > abs(r) > 1 - k
-        deepen = lambda r = None, k = None, n = None: n > 0 or not(1 + k > abs(r) > 1 - k)
     t = math.trunc(a)
     r = a - t
-    R = 1/r
-    if escape(r = r, k = k, n = n):
-        n = 0
-        r = 1
-        return [1,1]
-    elif deepen(r = r, k = k, n = n):
-        y = recfracs(R, n = n - 1, p = p)
-        y[0],y[1] = y[1],t*y[1]+y[0]
+    try:
+        R = 1/r
+    except:
+        R = 0
+    if n == None and p != None:
+        n = None
+        k = 10**(-p)
+        escape = lambda: kEscape(r, k)
+        deepen = lambda: not(kEscape(r, k))
+    elif n != None and p == None:
+        n = n
+        p = None
+        escape = lambda: nEscape(n)
+        deepen = lambda: not(nEscape(n))
+    else:
+        n = n if n != None else 10
+        p = p if p != None else 16
+        k = 10**(-p)
+        escape = lambda: nEscape(n) or kEscape(r, k)
+        deepen = lambda: not(nEscape(n)) or not(kEscape(r, k))
+    if escape():
+        return [0,1]
+    elif deepen():
+        l = n if n != None else 0
+        y = recfracs(a = R, n = l - 1, p = p)
+        y[0],y[1] = y[1], t * y[1] + y[0]
+        print (y)
         return y
+
+if __name__ == '__main__':
+    a = 1.4
+    b = recfracs(a, n = 4, p = 4)
+    print (b)

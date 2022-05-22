@@ -42,7 +42,7 @@ denominatorInput.pack()
 
 # Function for running algorithm on-demand
 def getFraction(*args):
-  d, n, *residue = fraction(a = decimalVar.get(), n = None, p = 4)
+  d, n, *residue = fraction(a = decimalVar.get(), n = None, p = None)
   numeratorVar.set(value = n)
   denominatorVar.set(value = d)
 
