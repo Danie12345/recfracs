@@ -2,7 +2,7 @@
 # Recursive Fractions
 > Like the project? Leave a star, it helps! ;)
 
-**Release 0.3.1**
+**Release 0.4.0**
 
 ## Description
 recfracs is an app that expands any rational (decimal) number into fraction form. It does not use the conventional method of division by powers of 10. It uses an entirely different and intuitive mathematical algorithm.
@@ -17,7 +17,7 @@ A few years ago, when I came up with this algorithm, I did not know much about p
 
 ## Explanation
 ### How it works
-- Maths happen.
+- Found a paper that explains it [here](https://begriffs.com/pdf/dec2frac.pdf). But I have my own explanation :) (it's very similar though)
 
 
 ## Contribute
@@ -31,9 +31,14 @@ A few years ago, when I came up with this algorithm, I did not know much about p
   - `python -m venv *path_to_repository*\recfracs\venv`
   - `python -m pip install -r requirements.txt`
 
-### To introduce new packages used
+### Introduce new packages used
 - Navigate to root dir, then run command
   - `pip freeze > requirements.txt`
+
+### Build
+- Navigate to root dir, then run command
+  - `pyinstaller -F -w src/main.py`
+
 
 ### Run
 - Navigate to `main.py` and run the file normally
