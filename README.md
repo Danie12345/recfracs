@@ -12,7 +12,7 @@ A few years ago, when I came up with this algorithm, I did not know much about p
 
 ## Installation
 ### Get the app!
-- Currently there is only the src/ folder with the basic script. You would need to setup the whole project in-order-to use it.
+- Currently there is only the src/ folder with the basic script. You would need to setup or build the project in-order-to use it.
 
 
 ## Explanation
