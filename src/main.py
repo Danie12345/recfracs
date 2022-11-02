@@ -49,10 +49,9 @@ decimalVar.trace('w', callback = getFraction)
 
 # Algorithm switcher
 def switch_algorithm(type):
-  global fraction
   getFraction()
-  fraction = algorithms[type]
   algorithmName.set(type)
+  return algorithms[type]
 
 
 # Main navigation
