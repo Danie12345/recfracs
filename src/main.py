@@ -1,9 +1,7 @@
 import fractions
-from itertools import tee
 from screeninfo import get_monitors
 import tkinter as tk
 
-from setuptools import Command
 from fracs.recfracs import recfracs as recFracs
 from fracs.loopfracs import loopfracs as loopFracs
 
